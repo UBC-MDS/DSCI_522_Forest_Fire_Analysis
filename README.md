@@ -1,11 +1,12 @@
-# DSCI_522_Forest_Fire_Analysis
-Analysis of forest fire occurrences 
-
 # Proposal for Forest Fire Analysis
 
-##### November, 2018                               
-##### Davy Guo and Jim Pushor    
+November, 2018                               
+Davy Guo and Jim Pushor    
+    
+    
 
+#### Purpose
+To analysize forest fire events from a public data set using an organized data analysis method.
 
 #### Data Set Identification
 After reviewing several datasets, we have chosen the ["Forest Fire Data Set" from the UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Forest+Fires).
