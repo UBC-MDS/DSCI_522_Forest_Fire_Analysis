@@ -8,7 +8,11 @@ Analysis of forest fire occurrences
 
 
 #### Data Set Identification
-After reviewing several datasets, we have chosen the "Forest Fire Data Set" from the UCI Machine Learning Repository. 
+After reviewing several datasets, we have chosen the ["Forest Fire Data Set" from the UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Forest+Fires).
+
+The data is loaded through a script located in the the "scripts" folder in this repository.
+
+![](img/script_ex.png)
 
 #### Question Identification
 This dataset represents 517 instances of forest fires in a national park located in Portugal. Each event instance has 13 related attributes, such as ambient temperature, the day of week the fire started, wind speed and area burned. Many of these attributes we assume to be obviously associated with the size of the burnt area (wind speed or ambient temperature), but what about an attribute that might not be so obviously associated with the size of the forest that burns? Would the day of the week that a fire starts have any bearing on the average size of the burnt area? Sometimes resources available in public services are more scarce on weekends versus weekdays. Might this contribute to larger fires that start on the weekend compared to weekdays? 
