@@ -4,7 +4,7 @@ Analysis of forest fire occurrences
 # Proposal for Forest Fire Analysis
 
 ##### November, 2018                               
-##### Davy Guo and Jim Pushor
+##### Davy Guo and Jim Pushor    
 
 
 #### Data Set Identification
@@ -22,21 +22,21 @@ We are focusing our analysis on two attributes from the dataset: "day" and "area
 Once we have identified our test statistic we will:
 
 1. Define the null and alternative hypothesis:    
-    $H_0$: The average burned area of the fire which starts on a weekend is equal to the average burned area of the fire which starts on a weekday.
-    $H_A$: The average burned area of the fire which starts on a weekend is  *different* from the average burned area of the fire which starts on a weekday.
+    **Null Hypothesis:** The average burned area of the fire which starts on a weekend is equal to the average burned area of the fire which starts on a weekday.    
+    **Alternative Hypothesis:** The average burned area of the fire which starts on a weekend is  *different* from the average burned area of the fire which starts on a weekday.
 
 2. Compute the test statistic (difference of means) that corresponds to the null hypothesis:
 
-    $\delta$* = $S_{weekends}-S_{weekdays} = 0$
+    Delta * = (Mean Weekend Fire Area) - (Mean Weekday Fire Area) = 0
 
-3. Use a model of the null hypothesis to generate a random dataset similar to the original dataset ($\delta$) and calculate a test statistic from that randomly generated dataset (do this many times to generate a distribution).
+3. Use a model of the null hypothesis to generate a random dataset similar to the original dataset (delta *) and calculate a test statistic from that randomly generated dataset (do this many times to generate a distribution).
 
-4. See where the test statistic ($\delta$*) from our sample(s) falls on this distribution
+4. See where the test statistic (delta *) from our sample(s) falls on this distribution
 
 5. If it is near the extremes (past a threshold of alpha = 0.05) we reject the null hypothesis; otherwise we cannot. More specifically, we can determine a p-value that represents the probability of seeing our observed test statistic or one more extreme under the null hypothesis. Our goal is to determine if there is evidence to reject our null hypothesis. 
 
 
-#### Data summarization
+#### Data Summarization
 
 We have already determined a fixed value of alpha to 0.05 to represent a threshold of significance for rejection of the null hypothesis. To provide the context of our analysis,  a small set of sample data with the difference of means between the two groups can be produced along with the high and low confidence intervals. Additionally, we can provide a p-value and a plot (i.e. null hypothesis distribution) with the confidence intervals and test statistic overlayed clearly to assist with our supporting our conclusion from our data. To aid in communicating our conclusion, the null hypothesis distribution may be represented with a histogram or kernel density plot along with visually representing where our observed test statistic and confidence intervals sit. 
 
