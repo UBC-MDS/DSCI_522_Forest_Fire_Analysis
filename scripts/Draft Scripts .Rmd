@@ -1,0 +1,109 @@
+---
+title: "Draft Script"
+author: "Weifeng Davy Guo"
+date: '2018-11-22'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Load Data and Data Wrangling}
+# load libraries
+library(tidyverse)
+library(infer)
+forest_data <- read.csv('https://archive.ics.uci.edu/ml/machine-learning-databases/forest-fires/forestfires.csv')
+
+(forest_data)
+(forest <- forest_data %>%
+    filter(area != 0.0) %>% 
+  select(day,area) %>%
+    mutate(day = fct_recode(day,
+      "weekday" = "mon", 
+      "weekday" = "tue", 
+      "weekday" = "wed",
+      "weekday" = "thu", 
+      "weekday" = "fri", 
+      "weekend" = "sat",
+      "weekend" = "sun"
+      ))
+  )
+```
+
+
+
+
+```{r exploratory visualization}
+library(tidyverse)
+# get estimate info for weekend fire
+weekday <- forest %>% 
+    filter(day == "weekday")
+
+mean_weekday <- mean(weekday$area)
+
+weekday_ci <- weekday %>% 
+    specify(response = area) %>% 
+    generate(reps = 1000)  %>% 
+    calculate(stat = "mean")  %>% 
+    get_ci() %>% 
+    rename(lower = `2.5%`, upper = `97.5%`) %>% 
+    mutate(mean = mean_weekday,
+          day = "weekday")
+
+# get estimate info for weekend fire
+weekend <- forest %>% 
+    filter(day == "weekend")
+
+mean_weekend <- mean(weekend$area)
+
+weekend_ci <- weekend %>% 
+    specify(response = area) %>% 
+    generate(reps = 1000)  %>% 
+    calculate(stat = "mean")  %>% 
+    get_ci() %>% 
+    rename(lower = `2.5%`, upper = `97.5%`) %>% 
+    mutate(mean = mean_weekend,
+          day = "weekend")
+
+# combine summarized data
+(summarized <- bind_rows(weekday_ci, weekend_ci))
+
+# plot estimates and ci's
+ggplot(forest, aes(x = day, y = area)) +
+    geom_jitter(alpha = 0.6, width = 0.1, size = 1) +
+    geom_violin() +
+    stat_summary(fun.y = mean, geom = "point", shape = 18, size = 3, color = "red") +
+    geom_errorbar(data = summarized, 
+                  mapping = aes(x = day, y = mean, ymin = lower, ymax = upper),
+                  color = "red", width=.5)+
+    ylim(0,300) +
+    theme_bw() +
+    xlab("Day of the Fire Starting") +
+    ylab("Burning Area(Hectare)") 
+```
+
+```{r Data analysis}
+mean_weekday <- mean(filter(forest, day == "weekday")$area)
+mean_weekend <- mean(filter(forest, day == "weekend")$area)
+(obs_diff <- mean_weekday - mean_weekend)
+
+set.seed(2018)
+null_distribution_two_means <- forest %>% 
+    specify(formula = area ~ day) %>% 
+    hypothesize(null = "independence") %>% 
+    generate(reps = 15000)  %>% 
+    calculate(stat = "diff in means", order = c("weekday", "weekend")) 
+
+ci <- null_distribution_two_means %>%  get_ci()
+```
+
+```{r Results}
+null_distribution_two_means %>% visualize() +
+    geom_vline(xintercept = obs_diff, colour = "red") +
+    geom_vline(xintercept = c(ci[[1]], ci[[2]]), color = "blue", lty = 2)
+
+(p_value <- sum(abs(null_distribution_two_means$stat) >= abs(obs_diff))/15000)
+```
+
+Since the p_value = 0.1583333 > 0.05, we failed to reject the null hypothesis.
