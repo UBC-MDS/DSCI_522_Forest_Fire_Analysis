@@ -3,7 +3,7 @@
 ###################################################
 ## visualize_data.R 
 ## Date: NOV 2018
-## Author: Jim Pusher and Weifeng Davy Guo
+## Author: Jim Pushor and Weifeng Davy Guo
 ## 
 ## Import the cleaned data to generate a general plot for user to understand the background
 ##
