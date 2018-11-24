@@ -3,7 +3,7 @@
 ###################################################
 ## result.R 
 ## Date: NOV 2018
-## Author: Jim Pusher and Weifeng Davy Guo
+## Author: Jim Pushor and Weifeng Davy Guo
 ## 
 ## Import the null distribution to generate the a plot of the result figure
 ##
