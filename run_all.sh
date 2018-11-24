@@ -22,4 +22,4 @@ Usage: Rscript scripts/analyze_data.R data/cleaned_forestfires.csv data/null_dis
 Rscript scripts/result.R data/cleaned_forestfires.csv img/Result.png
 
 # make report
-Rscript -e "rmarkdown::render('./doc/report.Rmd')"
+Rscript -e "rmarkdown::render('./reports/report.Rmd','github_document')"
