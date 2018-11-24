@@ -67,7 +67,7 @@ The following violin plot shows the distribution of the fires with the above con
 *Figure 2. Distribution Plot of Size of Burnt Area by Day Type*   
 *95% Confidence Intervals and Means Shown in Red*
 
-![](img/Estimation_and_CI_Plot.png)
+![](here::here(img/Estimation_and_CI_Plot.png))
 
 
 
@@ -76,7 +76,7 @@ After completing the null hypothesis, we visualized our observed difference in m
 *Figure 3. Histogram of Null Hypothesis Distribution with Observed Diff of Means Value in Red*
 *95% Confidence Intervals in Blue*
 
-![](img/Result.png)
+![](here::here(img/Result.png))
 
 ## Conclusion
 

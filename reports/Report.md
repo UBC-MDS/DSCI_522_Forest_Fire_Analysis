@@ -15,9 +15,9 @@ exploring the raw data set table (Table 1).
 
 ``` r
 library(knitr)
-FFR_data <- read.csv(here::here("data/FFRSample.csv"))
-FFC_data <- read.csv(here::here("data/FFCSample.csv"))
-FFS_data <- read.csv(here::here("data/Summraized_Data.csv"))
+FFR_data <- read.csv("data/FFRSample.csv")
+FFC_data <- read.csv("data/FFCSample.csv")
+FFS_data <- read.csv("data/Summraized_Data.csv")
 ```
 
 *Table 1. Forest Fire Raw Dataset
@@ -60,6 +60,10 @@ days.
 | weekday | 0.61 |
 | weekend | 0.71 |
 
+This is an R Markdown format used for publishing markdown documents to
+GitHub. When you click the **Knit** button all R code chunks are run and
+a markdown file (.md) suitable for publishing to GitHub is generated.
+
 ## Visualization (EDA)
 
 We explored our clean data by creating a distribution plot to compare
@@ -97,10 +101,16 @@ data set.
 
 ![](img/Estimation_and_CI_Plot.png)
 
-After completing the null hypothesis, we visualized our observed
+``` r
+# calculate p-value with infer
+  #null_distribution_two_means %>% 
+    #get_pvalue(obs_stat = delta_sample, direction = "both")
+```
+
+After completing the null hypothesis, we visulized our observed
 difference in means between the two groups compared to the null
 hypothesis distribution. The resulting histogram shows that our observed
-value is inside the range of our 95% confidence intervals. With a pvalue
+value in inside the range of our 95% confidence intervals. With a pvalue
 of 0.158, and the alpha set at 0.05, there is not enough evidence to
 reject the null hypothesis that the two means are different.
 
@@ -131,7 +141,7 @@ On reflection, there are a few things to consider:
     temperature.  
   - We made an assumption that there may be a different response rate on
     weekends versus weekdays because of the availability of resources.
-    This was not substantiated.
+    This was not substrantiated.
   - We do not know the priority of fighting these fires in the park. It
     may be the case that the fire fighting is triaged based on risk to
     public safety, versus risk of area burned.
