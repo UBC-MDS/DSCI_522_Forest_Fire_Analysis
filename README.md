@@ -44,7 +44,7 @@ Rscript scripts/analyze_data.R data/cleaned_forestfires.csv data/null_distributi
 Rscript scripts/result.R data/cleaned_forestfires.csv img/result.png
 
 # make report
-Rscript -e "rmarkdown::render('./reports/Report.Rmd')"
+Rscript -e "rmarkdown::render(''./reports/report.Rmd','github_document')"
 ```
 
  

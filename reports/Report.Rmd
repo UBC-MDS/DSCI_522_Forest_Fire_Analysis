@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-The purpose of the project was to explore a data set featuring forest fires in a national part of Portugal. We decided on an inferential question: **Do fires that begin on weekends burn more area on average than fires that begin on weekdays?** This question was spun out of exploring the raw data set table (Table 1).
+The purpose of the project was to explore a data set featuring forest fires in a national park of Portugal. We decided on an inferential question: **Do fires that begin on weekends burn more area on average than fires that begin on weekdays?** This question was spun out of exploring the raw data set table (Table 1).
 
 ```{r, echo FALSE}
 library(knitr)
