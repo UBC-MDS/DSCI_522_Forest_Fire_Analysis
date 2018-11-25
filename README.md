@@ -47,5 +47,10 @@ Rscript scripts/result.R data/cleaned_forestfires.csv img/result.png
 Rscript -e "rmarkdown::render(''./reports/report.Rmd','github_document')"
 ```
 
+#### Usage
+
+The report will be found through link below:
+https://github.com/UBC-MDS/DSCI_522_Forest_Fire_Analysis/blob/master/reports/Report.md
+
  
 
