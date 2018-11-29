@@ -16,10 +16,10 @@ Rscript scripts/clean_data.R data/forestfires.csv data/cleaned_forestfires.csv
 Rscript scripts/visualize_data.R data/cleaned_forestfires.csv img/EDA.png
 
 # analyze data and save null distribution
-Usage: Rscript scripts/analyze_data.R data/cleaned_forestfires.csv data/null_distribution_two_means.csv
+Rscript scripts/analyze_data.R data/cleaned_forestfires.csv data/null_distribution_two_means.csv
 
 # create plot and results
 Rscript scripts/result.R data/cleaned_forestfires.csv img/Result.png
 
 # make report
-Rscript -e "rmarkdown::render('./reports/report.Rmd','github_document')"
+Rscript -e "rmarkdown::render('reports/report.Rmd')"
