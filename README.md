@@ -26,6 +26,8 @@ R & R Libraries
 
 * ggbeeswarm
 
+* knitr
+
 #### Usage
 
 To process the analysis, we could run the following commandlines, or simply run the shell script "run_all.sh":
@@ -45,6 +47,39 @@ Rscript scripts/result.R data/cleaned_forestfires.csv img/result.png
 
 # make report
 Rscript -e "rmarkdown::render(''./reports/report.Rmd','github_document')"
+```
+
+#### Repository Structure
+
+```
+project_root/
+├── reports/
+│   ├── report.Rmd
+│   ├── report.md 
+├── scripts/
+│   ├── forest_data.R
+│   ├── clean_data.R
+│   ├── analyze_data.R
+│   ├── visualize_data.R
+│   ├── result.R
+├── data/
+│   ├── FFCSample.csv
+│   ├── FFC_data.csv
+│   ├── FFRSample.csv
+│   ├── Summarized_Data.csv
+│   ├── cleaned_forestfires.csv
+│   ├── forestfires.csv
+│   ├── null_distribution_two_means.csv
+├── img/
+│   ├── EDA.png
+│   ├── Estimation_and_CI_Plot.csv
+│   ├── Result.png
+│   ├── script_ex.png
+│   ├── EDA.png
+├── README.md
+├── .gitignore
+├── run_all.sh
+├── makefile
 ```
 
 #### Final Report

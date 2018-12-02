@@ -57,7 +57,7 @@ main <- function(){
   
   # combine summarized data
   summarized <- bind_rows(weekday_ci, weekend_ci)
-  write_csv(summarized,"reports/Summraized_Data.csv")
+  write_csv(summarized,"data/Summarized_Data.csv")
   
   # plot estimates and ci's
   ggplot(forest, aes(x = day, y = area)) +
