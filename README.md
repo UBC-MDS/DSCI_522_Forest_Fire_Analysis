@@ -18,15 +18,16 @@ After reviewing several datasets, we have chosen the ["Forest Fire Data Set" fro
 ![](img/script_ex.png)
 
 #### Dependencies
-R & R Libraries
+R 3.5.1
+R Libraries
 
-* tidyverse 
+* tidyverse 1.2.1
 
-* infer 
+* infer 0.3.1
 
-* ggbeeswarm
+* ggbeeswarm 0.6.0
 
-* knitr
+* knitr 1.20
 
 #### Usage
 
@@ -72,7 +73,7 @@ project_root/
 │   ├── null_distribution_two_means.csv
 ├── img/
 │   ├── EDA.png
-│   ├── Estimation_and_CI_Plot.csv
+│   ├── Estimation_and_CI_Plot.png
 │   ├── Result.png
 │   ├── script_ex.png
 │   ├── EDA.png
