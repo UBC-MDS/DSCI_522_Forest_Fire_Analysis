@@ -13,9 +13,9 @@ The purpose of the project was to explore a data set featuring forest fires in a
 
 ``` r
 library(knitr)
-FFR_data <- read.csv(here::here("data/FFRSample.csv"))
-FFC_data <- read.csv(here::here("data/FFCSample.csv"))
-FFS_data <- read.csv(here::here("data/Summraized_Data.csv"))
+FFR_data <- read.csv("../data/FFRSample.csv")
+FFC_data <- read.csv("../data/FFCSample.csv")
+FFS_data <- read.csv("../data/Summarized_Data.csv")
 ```
 
 *Table 1. Forest Fire Raw Dataset Sample*
@@ -66,8 +66,8 @@ We produced a data summation table to communicate the critical values of our ana
 
 |     lower|     upper|      mean| day     |
 |---------:|---------:|---------:|:--------|
-|  12.09896|  30.24516|  19.54287| weekday |
-|  16.86796|  62.27287|  34.88528| weekend |
+|  11.81139|  30.47887|  19.54287| weekday |
+|  16.80433|  63.39635|  34.88528| weekend |
 
 The following violin plot shows the distribution of the fires with the above confidence intervals and means noted for each group. The weekend group shows a larger range for the confidence intervals which suggests greater variation of values, as well as, effect of a relatively smaller data set.
 
