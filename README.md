@@ -96,13 +96,13 @@ Docker provides a convenient method to package our entire analysis application, 
 
 **Step 2:** Use the command line to navigate to the root of this project on your computer, and then type the following (filling in PATH_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer).
 
-docker run --rm -e PASSWORD=1234 -v <PATH_ON_YOUR_COMPUTER>:/DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis  make -C '/DSCI_522_Forest_Fire_Analysis' all
+```docker run --rm -e PASSWORD=1234 -v <PATH_ON_YOUR_COMPUTER>:/DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis  make -C '/DSCI_522_Forest_Fire_Analysis' all```
 
 **Step 3** The analysis is now in a local folder ready for your review.
 
 **Step 4** Once you are completed with the analysis review, clean up/remove the analysis by inputting at the command line:
 
-docker run --rm -e PASSWORD=1234 -v <PATH_ON_YOUR_COMPUTER>:/DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis make -C '/DSCI_522_Forest_Fire_Analysis' clean
+```docker run --rm -e PASSWORD=1234 -v <PATH_ON_YOUR_COMPUTER>:/DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis make -C '/DSCI_522_Forest_Fire_Analysis' clean```
 
 
 #### Final Report
