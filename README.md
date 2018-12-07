@@ -1,6 +1,6 @@
 # Forest Fire Analysis
 
-November, 2018                               
+December, 2018                               
 Davy Guo and Jim Pushor    
 
 #### Project Summary
