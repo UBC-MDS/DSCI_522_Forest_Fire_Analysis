@@ -36,7 +36,7 @@ R Libraries
 
 #### Usage
 
-To process the analysis, we could run the following individual statements at the command line, or simply run all the shell scripts "run_all.sh":
+To process the analysis, the user may choose to run the following individual commands at the command line, or simply run all the shell scripts with "run_all.sh":
 
 ```
 # load and clean data, inputfile: forestfires.csv, outputfile: cleaned_forestfires.csv
@@ -90,7 +90,7 @@ project_root/
 
 #### Docker Image
 
-Docker provides a convenient method to package our entire analysis application, dependencies and all, so anyone can reproduce our work on their local computer. A user can run the entire the "Forest Fire Analysis", just like we did, and be confident that the Docker container contains everything they need to reproduce the work. Follow the steps below to reproduce our analysis:
+Docker provides a convenient method to package our entire analysis application, including all dependencies, so that a can quickly and reliably reproduce our work. A user can run the entire the "Forest Fire Analysis", just like we did, and be confident that the Docker image and related container contains everything they need to reproduce the work. Follow the steps below to reproduce our analysis:
 
 **Step 1:** Clone/download this repository and create a local repository.
 
@@ -98,7 +98,7 @@ Docker provides a convenient method to package our entire analysis application, 
 
 docker run --rm -e PASSWORD=1234 -v <PATH_ON_YOUR_COMPUTER>:/DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis  make -C '/DSCI_522_Forest_Fire_Analysis' all
 
-**Step 3** The analysis is now in your local folder ready for your review.
+**Step 3** The analysis is now in a local folder ready for your review.
 
 **Step 4** Once you are completed with the analysis review, clean up/remove the analysis by inputting at the command line:
 
