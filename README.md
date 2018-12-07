@@ -107,6 +107,6 @@ docker run --rm -e PASSWORD=1234 -v <PATH_ON_YOUR_COMPUTER>:/DSCI_522_Forest_Fir
 
 #### Final Report
 
-The report will be found through link below:
+The analysis report (md file) is found through link below:
 
-https://github.com/UBC-MDS/DSCI_522_Forest_Fire_Analysis/blob/master/reports/Report.md
+[Analysis Report Link](https://github.com/UBC-MDS/DSCI_522_Forest_Fire_Analysis/blob/master/reports/Report.md)
