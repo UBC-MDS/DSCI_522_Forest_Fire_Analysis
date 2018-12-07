@@ -140,7 +140,7 @@ of 0.158, and the alpha set at 0.05, there is not enough evidence to
 reject the null hypothesis that the two means are different.
 
 *Figure 3. Histogram of Null Hypothesis Distribution with Observed Diff
-of Means Value in Red* *95% Confidence Intervals in Blue*
+of Means Value in Red &* *95% Confidence Intervals in Blue*
 
 ![](../img/Result.png)
 
@@ -156,25 +156,27 @@ dismiss the null hypothesis statement.
 
 On reflection, there are a few things to consider:
 
-  - Though we are testing the difference of means of a subpopulation of
-    a feature, it may be more appropriate to do muliple regression
-    testing to understand how the different features impact the response
-    variable: burnt area. Some features will be a stronger explanatory
-    variable than others. It is difficult to conclude from our analysis
-    that only the day of the week has an impact on the size of the fire,
-    while isolating the other influentual factors like wind speed and
-    temperature.  
-  - We made an assumption that there may be a different response rate on
-    weekends versus weekdays because of the availability of resources.
-    This was not substantiated.
-  - We do not know the priority of fighting these fires in the park. It
-    may be the case that the fire fighting is triaged based on risk to
-    public safety, versus risk of area burned.
+Though we are testing the difference of means of a subpopulation of a
+feature, it may be more appropriate to do muliple regression testing to
+understand how the different features impact the response variable:
+burnt area. Some features will be a stronger explanatory variable than
+others. It is difficult to conclude from our analysis that only the day
+of the week has an impact on the size of the fire, while isolating the
+other influentual factors like wind speed and temperature.
+
+We made an assumption that there may be a different response rate on
+weekends versus weekdays because of the availability of resources. This
+was not substantiated.
+
+We do not know the priority of fighting these fires in the park. It may
+be the case that the fire fighting is triaged based on risk to public
+safety, versus risk of area burned.
 
 **References**
 
 [UCI Machine Learning Data
 Sets](https://archive.ics.uci.edu/ml/datasets/Forest+Fires)  
 Peng, Roger and Elizabeth Matsui. “The Art of Data Science: A Guide for
-Anyone Who Works with Data” Leanpub. 2018. [Canadian Wildfire Fire
+Anyone Who Works with Data” Leanpub. 2018.  
+[Canadian Wildfire Fire
 Information](http://cwfis.cfs.nrcan.gc.ca/background/summary/fwi)
