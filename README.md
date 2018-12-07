@@ -95,7 +95,7 @@ docker run --rm -e PASSWORD=1234 -v <PATH_ON_YOUR_COMPUTER>:/DSCI_522_Forest_Fir
 
 To clean up the analysis type:
 
-docker run --rm -v PATH_ON_YOUR_COMPUTER:/DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis make -C '/DSCI_522_Forest_Fire_Analysis' clean
+docker run --rm -e PASSWORD=1234 -v <PATH_ON_YOUR_COMPUTER>:/DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis make -C '/DSCI_522_Forest_Fire_Analysis' clean
 
 **Step 3:**
 
