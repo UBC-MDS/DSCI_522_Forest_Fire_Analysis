@@ -132,6 +132,10 @@ a relatively smaller data set.
 
 ![](../img/Estimation_and_CI_Plot.png)
 
+**Hypothesis Testing** *The null hypothesis:* There is no difference in
+the mean of burnt area based on a fire starting on a weekday vs a
+weekend day.
+
 After completing the null hypothesis, we visualized our observed
 difference in means between the two groups compared to the null
 hypothesis distribution. The resulting histogram shows that our observed
@@ -159,18 +163,40 @@ On reflection, there are a few things to consider:
 Though we are testing the difference of means of a subpopulation of a
 feature, it may be more appropriate to do muliple regression testing to
 understand how the different features impact the response variable:
-burnt area. Some features will be a stronger explanatory variable than
-others. It is difficult to conclude from our analysis that only the day
-of the week has an impact on the size of the fire, while isolating the
-other influentual factors like wind speed and temperature.
+burnt area. It would be interesting to determine which features
+contribute to more of the variation of the area burnt than others. Also,
+because we can use linear regression analysis to observe both
+independent feature influence and the interaction of variables we should
+improve our understanding of how fire size is influenced. Therefore, It
+is difficult to conclude from our analysis and method that the day of
+the week has an impact on the size of the fire, independently,
+considering our method of analysis. On the other hand, the purpose of
+this project was only to determine if there is enough evidence to say
+that in the true population the mean size burnt is different on a
+weekday vs a weekend day. We did not find the significant evidence
+required.
 
-We made an assumption that there may be a different response rate on
-weekends versus weekdays because of the availability of resources. This
-was not substantiated.
+Secondly, one of our initial points of curiousity was whether the
+availability of resources on a weekend vs a weekday might influence the
+area burnt. In order for us to explore this assumption, we would require
+operational data from the forest fire management services, which we do
+not have. This would be another feature group to consider in building a
+model or performing regression analysis to understand whether this
+operational explanatory variable influences fire size. Also, we would
+have to substantiate whether we have statistical significance to make
+that determination.
 
-We do not know the priority of fighting these fires in the park. It may
-be the case that the fire fighting is triaged based on risk to public
-safety, versus risk of area burned.
+Lastly, We do not know the priority of fighting these fires in the park.
+It may be the case that fire fighting is triaged based on risk to public
+safety, versus risk of area burned. what is the goal of managing the
+fires? The approach to fighting fires is dependent on policies and
+mandates of governments and managing entities. We assumed that because
+this was in a national park, that the approach would be homogenious
+versus if the fire was in private lands or close to urban settings.
+
+We are satisfied that we chose to keep the “dimensions” of this project
+to a minimum, so to not distract us from the goal of understanding data
+science workflows.
 
 **References**
 
