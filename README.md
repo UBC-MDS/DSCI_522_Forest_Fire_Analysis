@@ -91,11 +91,11 @@ Docker provides a convenient method to package our entire analysis application, 
 
 **Step 2:** Use the command line to navigate to the root of this project on your computer, and then type the following (filling in PATH_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer).
 
-docker run --rm -e PASSWORD=1234 -v PATH_ON_YOUR_COMPUTER://DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis  make -C '/home/data_analysis_eg' all
+docker run --rm -e PASSWORD=1234 -v <PATH_ON_YOUR_COMPUTER>:/DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis  make -C '/DSCI_522_Forest_Fire_Analysis' all
 
 To clean up the analysis type:
 
-docker run --rm -v PATH_ON_YOUR_COMPUTER:/home/data_analysis_eg ttimbers/data_analysis_pipeline_eg make -C '/home/data_analysis_eg' clean
+docker run --rm -v PATH_ON_YOUR_COMPUTER:/DSCI_522_Forest_Fire_Analysis davyguo/dsci_522_forest_fire_analysis make -C '/DSCI_522_Forest_Fire_Analysis' clean
 
 **Step 3:**
 
