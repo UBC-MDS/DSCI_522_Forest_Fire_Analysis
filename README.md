@@ -34,25 +34,16 @@ R Libraries
 
 * knitr 1.20
 
-#### Usage
+#### Makefile Usage
 
-To process the analysis, the user may choose to run the following individual commands at the command line, or simply run all the shell scripts with "run_all.sh":
+To process the analysis, you can clone the project repository and navigate to the root folder, then run the example code provided below in the Terminal:
 
 ```
-# load and clean data, inputfile: forestfires.csv, outputfile: cleaned_forestfires.csv
-Rscript scripts/clean_data.R data/forestfires.csv data/cleaned_forestfires.csv
+# clean up all the output files
+make clean
 
-# plot exploratory visualization, inputfile: cleaned_forestfires.csv, outputfile: EDA.png
-Rscript scripts/visualize_data.R data/cleaned_forestfires.csv img/EDA.png
-
-# analyze data, inputfile: cleaned_forestfires.csv, outputfile: null_distribution_two_means.csv
-Rscript scripts/analyze_data.R data/cleaned_forestfires.csv data/null_distribution_two_means.csv
-
-# create plot and results, inputfile: cleaned_forestfires.csv, outputfile: result.png
-Rscript scripts/result.R data/cleaned_forestfires.csv img/result.png
-
-# make report
-Rscript -e "rmarkdown::render(''./reports/report.Rmd','github_document')"
+# generate analysis report
+make all
 ```
 
 #### Repository Structure
