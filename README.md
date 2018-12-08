@@ -77,6 +77,9 @@ project_root/
 ├── .gitignore
 ├── run_all.sh
 ├── makefile
+├── Dockerfile
+├── CONDUCT.md
+
 ```
 
 #### Docker Image
